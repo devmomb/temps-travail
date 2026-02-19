@@ -22,7 +22,7 @@ return (
 <div style={{minHeight:“100vh”,background:”#0A0A0A”,display:“flex”,alignItems:“center”,justifyContent:“center”,fontFamily:”‘DM Mono’,‘Courier New’,monospace”}}>
 <div style={{width:320,padding:“40px 32px”,background:”#0D0D0D”,border:“1px solid #1E1E1E”,borderRadius:12,display:“flex”,flexDirection:“column”,alignItems:“center”,gap:20}}>
 <div style={{fontFamily:”‘Barlow Condensed’,‘Arial Narrow’,sans-serif”,fontWeight:800,fontSize:28,color:”#E8E4DF”,letterSpacing:”.01em”}}>
-TEMPS<span style={{color:”#E86C3A”}}>·</span>TRAVAIL
+MONEY<span style={{color:”#E86C3A”}}>·</span>TIMER
 </div>
 <div style={{fontSize:10,color:”#333”,letterSpacing:”.18em”}}>ACCÈS PROTÉGÉ</div>
 <input
@@ -198,7 +198,7 @@ const json = JSON.stringify(data, null, 2);
 const blob = new Blob([json], {type:“application/json”});
 const url = URL.createObjectURL(blob);
 const a = document.createElement(“a”);
-a.href = url; a.download = `temps-travail-${todayStr()}.json`;
+a.href = url; a.download = `money-timer-${todayStr()}.json`;
 a.click(); URL.revokeObjectURL(url);
 }
 
@@ -337,7 +337,7 @@ return (
   {/* HEADER */}
   <div style={{borderBottom:"1px solid #181818",padding:"11px 22px",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
     <div>
-      <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontWeight:800,fontSize:20}}>TEMPS<span style={{color:"#E86C3A"}}>·</span>TRAVAIL</div>
+      <div style={{fontFamily:"'Barlow Condensed',sans-serif",fontWeight:800,fontSize:20}}>MONEY<span style={{color:"#E86C3A"}}>·</span>TIMER</div>
       <div style={{fontSize:9,color:"#3A3A3A",letterSpacing:".14em"}}>TJM BASE {DEFAULT_TJM}€HT · {(DEFAULT_TJM/WORK_HOURS_PER_DAY).toFixed(1)}€/H</div>
     </div>
     <div style={{display:"flex",gap:7,alignItems:"center"}}>
